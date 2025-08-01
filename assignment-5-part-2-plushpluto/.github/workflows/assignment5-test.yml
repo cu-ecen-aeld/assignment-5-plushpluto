@@ -1,0 +1,13 @@
+name: assignment5-part2-test
+on: [push]
+jobs:
+    assignment-test:
+        container: cuaesd/aesd-autotest:assignment5
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v3
+          - name: Initialize submodules
+            run: git submodule update --init --recursive
+          - name: Execute assignment tests
+            run: ./assignment-autotest/full-test.sh
