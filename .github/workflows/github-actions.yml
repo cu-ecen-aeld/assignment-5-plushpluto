@@ -8,5 +8,7 @@ jobs:
           - uses: actions/checkout@v2
           - name: Checkout submodules
             run : git submodule update --init --recursive
+          - name: Install netcat
+            run: apt-get update && apt-get install -y netcat-openbsd
           - name: Run unit test
             run: ./full-test.sh
