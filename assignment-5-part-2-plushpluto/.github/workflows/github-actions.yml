@@ -4,11 +4,9 @@ jobs:
     test:
         container: cuaesd/aesd-autotest:assignment5-buildroot
         runs-on: ubuntu-latest
-        env:
-          SSH_PRIVATE_KEY: ""
         steps:
           - uses: actions/checkout@v2
           - name: Checkout submodules
             run : git submodule update --init --recursive
-          - name: Run unit test
+          - name: Run assignment tests
             run: ./assignment-autotest/full-test.sh
