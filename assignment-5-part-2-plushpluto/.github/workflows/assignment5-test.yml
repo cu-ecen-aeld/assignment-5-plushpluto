@@ -1,4 +1,4 @@
-# Assignment 5 Part 2 Test Workflow - No SSH Required
+# Assignment 5 Part 2 Test Workflow - Clean Run
 name: assignment5-part2-test
 on: [push]
 jobs:
